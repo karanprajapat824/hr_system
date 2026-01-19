@@ -1,0 +1,80 @@
+.admin-employees-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header */
+.admin-employees-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.admin-employees-header p {
+  color: #6b7280;
+}
+
+/* Card */
+.admin-employees-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.6rem;
+  overflow-x: auto;
+}
+
+/* Table */
+.admin-employees-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-employees-table th,
+.admin-employees-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.admin-employees-table th {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* User cell */
+.admin-employees-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.admin-employees-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-employees-avatar svg {
+  font-size: 1.2rem;
+}
+
+.admin-employees-user strong {
+  display: block;
+}
+
+.admin-employees-user p {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-employees-table {
+    font-size: 0.9rem;
+  }
+}

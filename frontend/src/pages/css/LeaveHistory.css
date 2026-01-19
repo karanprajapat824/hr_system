@@ -1,0 +1,156 @@
+.leave-history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header */
+.leave-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leave-history-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.leave-history-header p {
+  color: #6b7280;
+}
+
+.leave-history-filter {
+  padding: 0.4rem 0.6rem;
+  border: 2px solid var(--ol);
+  border-radius: 0.4rem;
+}
+
+/* Card */
+.leave-history-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+
+/* Table */
+.leave-history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leave-history-table th,
+.leave-history-table td {
+  padding: 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.leave-history-type {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: lowercase;
+}
+
+/* Icons */
+.leave-history-type .casual {
+  color: #0284c7;
+}
+.leave-history-type .sick {
+  color: #dc2626;
+}
+.leave-history-type .paid {
+  color: #16a34a;
+}
+
+/* Badge */
+.leave-history-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.leave-history-badge.pending {
+  background: #fef3c7;
+}
+.leave-history-badge.approved {
+  background: #dcfce7;
+}
+.leave-history-badge.rejected {
+  background: #fee2e2;
+}
+.leave-history-badge.cancelled {
+  background: #e5e7eb;
+}
+
+/* Cancel button */
+.leave-history-cancel {
+  background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Empty */
+.leave-history-empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Modal */
+.leave-history-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leave-history-modal-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+.leave-history-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .leave-history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .leave-history-table {
+    font-size: 0.5rem;
+    padding: 0;
+  }
+  .leave-history-card{
+    padding: 0;
+  }
+  .leave-history-badge{
+    font-size: 0.3rem;
+  }
+  .leave-history-cancel{
+    font-size: 0.5rem;
+  }
+}

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --bg-one : rgba(255, 255, 255, 0.87);
+  --bg-two : #1a1919;
+  --fg-one : #212121;
+  --fg-two : rgba(255, 255, 255, 0.87);
+  --bg-two-h : #333;
+  --pc : rgb(33, 182, 149);
+  --sc : #2563eb;
+  --ol : black;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--fg-one);
+  background-color: var(--bg-one);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

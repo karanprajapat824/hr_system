@@ -1,0 +1,87 @@
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+.button-primary {
+  background: var(--sc);
+  color: var(--fg-two);
+}
+
+.button-secondary {
+  background: var(--pc);
+  color: var(--fg-two);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--pc);
+  border: 1px solid var(--ol);
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--pc);
+}
+
+.button-primary:hover {
+  filter: brightness(0.9);
+}
+
+.button-secondary:hover {
+  filter: brightness(0.9);
+}
+
+.button-outline:hover {
+  background: var(--pc);
+  color: var(--fg-two);
+  border-color: transparent;
+}
+
+.button-ghost:hover {
+  background: var(--ghost);
+}
+
+.button-sm {
+  padding: 0.45rem 1.2rem;
+  font-size: 0.85rem;
+}
+
+.button-md {
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+}
+
+.button-lg {
+  padding: 0.9rem 3rem;
+  font-size: 1.1rem;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--pc);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .button-lg {
+    padding: 0.75rem 2.2rem;
+    font-size: 1rem;
+  }
+
+  .button-md {
+    padding: 0.6rem 1.6rem;
+  }
+}

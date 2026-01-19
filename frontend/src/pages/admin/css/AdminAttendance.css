@@ -1,0 +1,126 @@
+.admin-attendance-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header */
+.admin-attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-attendance-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.admin-attendance-header p {
+  color: #6b7280;
+}
+
+/* Search */
+.admin-attendance-search {
+  position: relative;
+  width: 240px;
+}
+
+.admin-attendance-search svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.admin-attendance-search input {
+  width: 100%;
+  padding: 0.55rem 0.6rem 0.55rem 2rem;
+  border: 1px solid var(--ol);
+  border-radius: 0.4rem;
+  outline: none;
+}
+
+.admin-attendance-search input:focus {
+  border-color: var(--pc);
+}
+
+/* Card */
+.admin-attendance-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.6rem;
+  overflow-x: auto;
+}
+
+/* Table */
+.admin-attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-attendance-table th,
+.admin-attendance-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.admin-attendance-table th {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.admin-attendance-table td p {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Badge */
+.admin-attendance-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.admin-attendance-badge.present {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.admin-attendance-badge.absent {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Empty */
+.admin-attendance-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-attendance-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-attendance-search {
+    width: 100%;
+  }
+  .admin-attendance-table{
+    font-size: 0.5rem;
+  }
+  .admin-attendance-table thead th{
+    font-size: 0.5rem;
+  }
+  .admin-attendance-badge{
+    font-size: 0.5rem;
+  }
+}
