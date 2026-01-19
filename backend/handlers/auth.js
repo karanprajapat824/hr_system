@@ -52,7 +52,7 @@ export async function handleRefreshToken(req, res) {
 
 export async function handleSignUp(req, res) {
     try {
-        const { name, email, password, department,phone } = req.body;
+        const { name, email, password, department, phone } = req.body;
 
         if (!name || !email || !password || !department || !phone) {
             return res.status(400).json({
@@ -60,7 +60,7 @@ export async function handleSignUp(req, res) {
             });
         }
 
-        const existingUser = await User.findOne({ email });
+        const existingUser = await User.findOne({ email: email.toLowerCase() });
         if (existingUser) {
             return res.status(409).json({
                 message: "User already exists",
@@ -77,7 +77,7 @@ export async function handleSignUp(req, res) {
             phone
         });
 
-        
+
 
         const accessToken = jwt.sign(
             {
@@ -140,7 +140,7 @@ export async function handleSignIn(req, res) {
             });
         }
 
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ email: email.toLowerCase() });
         if (!user) {
             return res.status(401).json({
                 message: "Invalid email or password",
@@ -204,14 +204,14 @@ export async function handleSignIn(req, res) {
 
 export function handleSignOut(req, res) {
     try {
-        
+
         res.clearCookie("access_token", {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
             sameSite: "strict",
         });
 
-        
+
         res.clearCookie("refresh_token", {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
