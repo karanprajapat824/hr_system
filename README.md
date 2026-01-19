@@ -199,3 +199,7 @@ All core logic and decisions were implemented manually.
 ## ⏱ Time Spent
 
 Approximate time spent: 10–12 hours
+
+## public url 
+- frontend : ```https://hr-system-eta-eight.vercel.app/```
+- backend : ```https://hr-system-3tks.onrender.com```
