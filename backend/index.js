@@ -31,6 +31,9 @@ app.use("/auth", AuthController);
 app.use("/user", UserController);
 app.use("/admin", AdminController);
 
+app.get("/",async (req,res)=>{
+    res.json({message : "running"});
+})
 
 app.listen(process.env.PORT || 4040, () => {
     console.log("Server running on port number : " + process.env.PORT);
