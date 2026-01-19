@@ -7,7 +7,7 @@ import {
   FaTimesCircle,
 } from "react-icons/fa";
 import Button from "./../../components/ui/Button";
-import "./css/AdminDashboard.css";
+import "./css/AdminDashBoard.css";
 import Sidebar from "../../components/Sidebar";
 import api from "../../lib/api";
 import Loader from "../../components/ui/Loader";
